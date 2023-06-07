@@ -28,7 +28,7 @@ body {
 }
 
 #logo {
-    width: 15vw;
+    width: 50px;
     margin: 0 auto;
 }
 
@@ -129,5 +129,18 @@ nav {
     display: none;
 }
 
+
+/* Count Section */
+#count-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#count {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 
