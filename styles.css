@@ -12,6 +12,24 @@ body {
     font-family: 'Hammersmith One', sans-serif;
 }
 
+.container {
+    max-width: 320px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+}
+
+nav {
+    display: flex;
+
+}
+
+#logo {
+    width: 15vw;
+    margin: 0 auto;
+}
+
 .numbers {
     font-family: 'Geologica', sans-serif;
 }
