@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@900&family=Hammersmith+One&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -5,5 +7,11 @@
 
 body {
     font-size: 16px;
-    background: red;
+    background: #FFD599;
+    color: #191919;
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+.numbers {
+    font-family: 'Geologica', sans-serif;
 }
