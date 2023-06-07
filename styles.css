@@ -137,10 +137,9 @@ nav {
     align-items: center;
 }
 
-#count {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
 
+.count-wrapper {
+    display: flex;
+    text-align: center;
+}
 
