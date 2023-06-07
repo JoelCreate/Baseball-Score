@@ -20,16 +20,7 @@ body {
     margin: 30px auto;
 }
 
-/* Mobile Menu */
-header {
-    padding: 10px;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #ffffee;
-}  
-  
+/* Mobile Menu */ 
 ul {
     list-style: none;
     height: 100%;
@@ -38,16 +29,13 @@ ul {
 }
   
 ul a {
-    color: #ffffee;
+    color: #772f1a;
+    font-size: 1.25em;
+    text-decoration: none;
 }
   
 li {
     margin: 0px 5px;
-}
-  
-ul li:hover {
-    transform: scale(1.1);
-    transition: 0.3s;
 }
   
 #menu {
@@ -65,53 +53,47 @@ ul li:hover {
 }
 
 .open .bar1 {
--webkit-transform: rotate(-45deg) translate(-6px, 6px);
-transform: rotate(-45deg) translate(-6px, 6px);
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
 }
 
 .open .bar2 {
-opacity: 0;
+    opacity: 0;
 }
 
 .open .bar3 {
--webkit-transform: rotate(45deg) translate(-6px, -8px);
-transform: rotate(45deg) translate(-6px, -8px);
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
 }
 
 .open .mobile-menu {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 } 
 
 .mobile-menu {
-display: none;
-position: absolute;
-top: 55px;
-left: 0;
-background: #AE9362;
-height: auto;
-width: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,0.8);
+    height: 100%;
+    width: 100%;
 }
 
 .mobile-menu li {
-margin-bottom: 10px;
-padding: 5px;
-}
-
-header nav {
-    display: none;
+    margin-bottom: 10px;
+    padding: 5px;
 }
 
 #menu {
     display: block;
 }
 
-
 nav {
     display: flex;
-
 }
 
 #logo {
