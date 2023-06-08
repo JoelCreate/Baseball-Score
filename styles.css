@@ -12,6 +12,7 @@ body {
     background: #FFE6C2;
     color: #191919;
     font-family: 'Hammersmith One', sans-serif;
+    overflow: hidden;
 }
 
 .numbers {
@@ -27,16 +28,20 @@ p {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
     background: rgba(0,0,0,0.85);
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     z-index: 1;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .modal-wrapper {
-    max-width: 300px;
+    max-width: 310px;
     margin: 0 auto;
     text-align: center;
     background-color: #EDE7D9;
@@ -97,7 +102,6 @@ hr {
     flex-direction: column;
     margin: 30px auto;
     position: relative;
-    border: 1px solid #000;
 }
 
 #logo {
