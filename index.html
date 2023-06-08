@@ -11,7 +11,9 @@
 
         <div class="container">
             <nav>
+                
                 <img id="logo" src="./icons/baseball_bats.png" alt="basbeball bat score logo">
+
                 <div id="menu" onclick="toggleMobileMenu(this)">
                     <div class="bar bar1"></div>
                     <div class="bar bar2"></div>
@@ -22,31 +24,30 @@
                         <li><a href="#portfolio">Start Over</a></li>  
                     </ul>
                 </div>
+                
             </nav>
 
             <div id="score">
-                <div class="slider">
-                    <div class="slider-wrapper">
-                        <div class="teams" id="team1">
-                            <h2 class="team-name">Home Team</h2>                  
-                            <div id="score-el">
-                                <h1 class="numbers points">11</h1>
-                            </div>
-                        </div>
-
-                        <div class="teams" id="team2">
-                            <h2 class="team-name">Away Team</h2>                   
-                            <div id="score-el">
-                                <h1 class="numbers points">13</h1>
-                            </div>
-                        </div>
+                
+                <div class="teams" id="team1">
+                    <h2 class="team-name">Home Team</h2>                  
+                    <div id="score-el">
+                        <h1 class="numbers points">11</h1>
                     </div>
                 </div>
 
-                <div class="pagination">
+                <div class="teams" id="team2">
+                    <h2 class="team-name">Away Team</h2>                   
+                    <div id="score-el">
+                        <h1 class="numbers points">13</h1>
+                    </div>
+                </div>
+                  
+
+                <!-- <div class="pagination">
                     <span class="active"></span>
                     <span></span>
-                </div>
+                </div> -->
                 
             </div>
 
@@ -55,11 +56,12 @@
             <div id="count-container">
 
                 <div id="inning">
-                    <h3>Inning: <span class="numbers">1</span></h3>
+                    <h3>Inning <span class="numbers">1</span></h3>
                 </div>
 
-                <div class="count-wrapper" id="count">
-                    <div id="balls">
+                
+                <div class="count-wrapper">
+                    <div class="count" id="balls">
                         <p>Balls</p>
                         <i class="fa-regular fa-circle"></i>
                         <i class="fa-regular fa-circle"></i>
@@ -67,11 +69,11 @@
                         <i class="fa-solid fa-circle"></i>
                     </div>
 
-                    <div id="strikes">
+                    <div class="count" id="strikes">
                         <p>Strikes</p>
                     </div>
 
-                    <div id="outs">
+                    <div class="count" id="outs">
                         <p>Outs</p>
                     </div>
                 </div>
