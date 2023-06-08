@@ -106,8 +106,7 @@ hr {
 #logo {
     width: 50px;
     height: 50px;
-    position: absolute;
-    left: 135px;
+    margin: 0 auto;
 }
 
 /* Mobile Menu */ 
@@ -195,7 +194,6 @@ li {
 #score {
     display: flex;
     justify-content: center;
-    margin-top: 10vh;
 } 
 
 .teams {
@@ -258,10 +256,6 @@ li {
 
 /* Count Section */
 #count-container{
-    position: absolute;
-    bottom: 5%;
-    left: 0;
-    right: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
