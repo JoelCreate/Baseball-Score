@@ -95,8 +95,7 @@ hr {
 }
 
 .container {
-    max-width: 320px;
-    height: 90vh;
+    max-width: 360px;
     padding: 20px;
     display: flex;
     flex-direction: column;
