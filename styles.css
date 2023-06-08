@@ -49,14 +49,14 @@ p {
 
 #modal-header img {
     width: 50px;
-    transform: rotate(-15deg)
+    margin: 10px auto;
 }
 
 #modal-header p {
     font-size: 1em;
 }
 
-input {
+input, .btn {
     width: 100%;
     padding: 10px;
     text-align: center;    
@@ -64,11 +64,28 @@ input {
     letter-spacing: 1px;
     border: 0px;
     border-radius: 5px;
+}
+
+input {
     margin: 10px auto;
+}
+
+.btn {
+    margin: 2px auto;
+    background: #c86b0c;
+    color: #fff;
+}
+
+.btn:hover {
+    cursor: pointer;
 }
 
 hr {
     border: 1px dashed #b6ab93;
+}
+
+#modal-2 {
+    display: none;
 }
 
 .container {
