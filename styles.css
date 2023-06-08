@@ -17,6 +17,9 @@ body {
     font-family: 'Geologica', sans-serif;
 }
 
+p {
+    font-size: 1.25em;
+}
 
 .container {
     max-width: 320px;
@@ -191,20 +194,42 @@ li {
     align-items: center;
 } 
 
-#inning, .count-wrapper{
+#inning {
+    justify-content: flex;
+    gap: .5em;
+}
+
+.count-wrapper{
+    justify-content: space-around;
+    align-items: flex-start;    
+}
+
+#inning, .count-wrapper {
     width: 300px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
     padding: 15px;
     border-top: 1px solid #191919;
     border-left: 1px solid #191919;
     border-right: 1px solid #191919;
 }
 
+#inning span {
+    font-size: 1em;
+}
+
+#inning-arrows {
+    display: flex;
+    height: 30px;
+    align-items: center;
+}
 
 .count-wrapper {
-    border-bottom: 1px solid #191919;    
+    border-bottom: 1px solid #191919;  
+    text-align: center;  
+}
+
+.count {
+    margin: 0 30px;
 }
 
 
