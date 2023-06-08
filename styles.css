@@ -217,10 +217,15 @@ li {
     font-size: 1em;
 }
 
-#inning-arrows {
+#inning-arrows, #inning-plus-minus {
     display: flex;
     height: 30px;
     align-items: center;
+}
+
+#inning-plus-minus {
+    gap: 1.25em;
+    margin: 0 0 0 48px;
 }
 
 .count-wrapper {
