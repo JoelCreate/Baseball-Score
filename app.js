@@ -12,7 +12,21 @@ const homeTeamName = document.getElementById('home-team-el')
 const awayTeamInput = document.getElementById('away-team-input')
 const awayTeamName = document.getElementById('away-team-el')
 
+let homeTeamPoints = document.getElementById('home-team-points')
+let awayTeamPoints = document.getElementById('away-team-points')
 
+let homeScore = 0
+let awayScore = 0
+
+function plusOneHome() {
+    homeScore += 1
+    homeTeamPoints.textContent = homeScore
+}
+
+function plusOneAway() {
+    awayScore += 1
+    awayTeamPoints.textContent = awayScore
+}
 
 submitBtnHome.addEventListener("click", function(){
     let homeTeamEntered = homeTeamInput.value    
@@ -40,6 +54,8 @@ submitBtnStart.addEventListener("click", function() {
     }
     
 })
+
+
 
 
 // const slider = document.querySelector('.slider')
