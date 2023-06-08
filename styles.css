@@ -21,6 +21,56 @@ p {
     font-size: 1.25em;
 }
 
+/* Modal Pop-up */
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.85);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.modal-wrapper {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #EDE7D9;
+    border-radius: 10px;
+    box-shadow: 0px 1px 8px #000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+#modal-header img {
+    width: 50px;
+    transform: rotate(-15deg)
+}
+
+#modal-header p {
+    font-size: 1em;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    text-align: center;    
+    font-family: 'Hammersmith One', sans-serif;
+    letter-spacing: 1px;
+    border: 0px;
+    border-radius: 5px;
+    margin: 10px auto;
+}
+
+hr {
+    border: 1px dashed #b6ab93;
+}
+
 .container {
     max-width: 320px;
     height: 90vh;
@@ -70,10 +120,6 @@ li {
     border-radius: 100px;
     margin: 6px 0;
     transition: 0.4s;
-}
-
-.bar1, .bar2, .bar3 {
-    z-index: 99999 !important;
 }
 
 
