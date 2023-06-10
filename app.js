@@ -16,6 +16,9 @@ const awayTeamName = document.getElementById('away-team-el')
 const homeTeamVS = document.getElementById('home-team-vs')
 const awayTeamVS = document.getElementById('away-team-vs')
 
+
+
+
 let homeTeamEntered = homeTeamInput.value
 let awayTeamEntered = awayTeamInput.value
 
@@ -59,8 +62,8 @@ submitBtnAway.addEventListener("click", function(){
         modalAway.style.display = 'none'
         modalVS.style.display = 'block'
 
-        homeTeamVS.textContent += homeTeamEntered
-        awayTeamVS.textContent += awayTeamEntered
+        homeTeamVS.textContent = homeTeamEntered
+        awayTeamVS.textContent = awayTeamEntered
     }
     
 })
@@ -78,20 +81,40 @@ submitBtnStart.addEventListener("click", function() {
 })
 
 
+const slides = document.querySelectorAll('.slide')
+const dots = document.querySelectorAll('.dot')
 
+let currentIndex = 0
 
-// const slider = document.querySelector('.slider')
-// const sliderWrapper = document.querySelector('.slider-wrapper')
-// const pagination = document.querySelectorAll('.pagination span')
-// let slideId = 1
+// Function to show the current slide and update the active dot
+function showSlide(index) {
+  // Hide all slides
+  slides.forEach((slide) => {
+    slide.style.display = 'none'
+  })
 
-// function slide(id){
-//    sliderWrapper.getElementsByClassName.left = -100 * id + "%" 
+  // Remove active class from all dots
+  dots.forEach((dot) => {
+    dot.classList.remove('active')
+  })
 
-//     pagination.foeEach(page => {
-//         page.classList.remove('active')
-//     })
+  // Show the current slide and add active class to the corresponding dot
+  slides[index].style.display = 'block'
+  dots[index].classList.add('active')
+}
 
-//     pagination[id].classList.add('active')
+// Function to handle slide navigation when a dot is clicked
+function handleDotClick(index) {
+  showSlide(index)
+  currentIndex = index
+}
 
-// }
+// Attach click event listeners to each dot
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    handleDotClick(index)
+  })
+})
+
+// Show the initial slide
+showSlide(currentIndex)

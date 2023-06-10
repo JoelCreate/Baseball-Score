@@ -60,36 +60,39 @@
                     <div class="bar bar2"></div>
                     <div class="bar bar3"></div>
                     <ul class="mobile-menu">
-                        <li><a href="#header">Change Home Team Name</a></li>
-                        <li><a href="#about">Change Away Team Name</a></li>
-                        <li><a href="#portfolio">Start Over</a></li>  
+                        <!-- <li><a href="#header">Change Home Team Name</a></li>
+                        <li><a href="#about">Change Away Team Name</a></li> -->
+                        <li><a href="#home">Start Over</a></li>  
+                        <p id="menu-footer">Created with <i class="fa-solid fa-code"></i> by <a href="https://joelcodes.co">Joel Wiesner</a> | &copy; 2023</p>
                     </ul>
                 </div>
                 
             </nav>          
 
 
-            <div id="score">
+            <div class=" slider" id="score">
+                <div class="slides">
                 
-                <div class="teams" id="team1">
-                    <h2 class="team-name" id="home-team-el"></h2>                  
-                    <div id="score-el" onclick="plusOneHome()">
-                        <h1 class="numbers points" id="home-team-points">0</h1>
+                    <div class="teams slide" id="team1">
+                        <h2 class="team-name" id="home-team-el">home</h2>                  
+                        <div id="score-el" onclick="plusOneHome()">
+                            <h1 class="numbers points" id="home-team-points">0</h1>
+                        </div>
                     </div>
+
+                    <div class="teams slide" id="team2">
+                        <h2 class="team-name" id="away-team-el">away</h2>                   
+                        <div id="score-el" onclick="plusOneAway()">
+                            <h1 class="numbers points" id="away-team-points">0</h1>
+                        </div>
+                    </div>
+                
                 </div>
 
-                <div class="teams" id="team2">
-                    <h2 class="team-name" id="away-team-el">Away Team</h2>                   
-                    <div id="score-el" onclick="plusOneAway()">
-                        <h1 class="numbers points" id="away-team-points">0</h1>
-                    </div>
+                <div class="pagination">
+                    <button class="dot"></button>
+                    <button class="dot"></button>
                 </div>
-                  
-
-                <!-- <div class="pagination">
-                    <span class="active"></span>
-                    <span></span>
-                </div> -->
                 
             </div>
 
