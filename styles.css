@@ -310,7 +310,24 @@ li {
     margin: 0 30px;
 }
 
+.count-dots {
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border: 2px solid #191919;
+    border-radius: 50%;
+}
 
+.count-dot-active {
+    background-color: #191919;
+}
+
+.dot-wrapper {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: .5em;
+}
 
 
 

@@ -80,79 +80,86 @@ submitBtnStart.addEventListener("click", function() {
     
 })
 
-const slider = document.querySelector('.slider');
+const slider = document.querySelector('.slider')
 const slides = document.querySelectorAll('.slide')
 const dots = document.querySelectorAll('.dot')
 
 let currentIndex = 0
-let startX = 0;
-let isDragging = false;
+let startX = 0
+let isDragging = false
 
 // Function to show the current slide and update the active dot
 function showSlide(index) {
     // Hide all slides
     slides.forEach((slide) => {
-      slide.style.display = 'none';
-    });
+      slide.style.display = 'none'
+    })
   
     // Remove active class from all dots
     dots.forEach((dot) => {
-      dot.classList.remove('active');
-    });
+      dot.classList.remove('active')
+    })
   
     // Show the current slide and add active class to the corresponding dot
-    slides[index].style.display = 'block';
-    dots[index].classList.add('active');
+    slides[index].style.display = 'block'
+    dots[index].classList.add('active')
   }
   
   // Function to handle slide navigation when a dot is clicked
   function handleDotClick(index) {
-    showSlide(index);
-    currentIndex = index;
+    showSlide(index)
+    currentIndex = index
   }
   
   // Attach click event listeners to each dot
   dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
-      handleDotClick(index);
-    });
-  });
+      handleDotClick(index)
+    })
+  })
   
   // Show the initial slide
-  showSlide(currentIndex);
+  showSlide(currentIndex)
   
   // Touch event handlers
   slider.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-    isDragging = true;
-  });
+    startX = e.touches[0].clientX
+    isDragging = true
+  })
   
   slider.addEventListener('touchmove', (e) => {
-    if (!isDragging) return;
+    if (!isDragging) return
   
-    const currentX = e.touches[0].clientX;
-    const diffX = currentX - startX;
+    const currentX = e.touches[0].clientX
+    const diffX = currentX - startX
   
     // Swipe left
     if (diffX < -50) {
       if (currentIndex < slides.length - 1) {
-        currentIndex++;
-        showSlide(currentIndex);
+        currentIndex++
+        showSlide(currentIndex)
       }
     }
   
     // Swipe right
     if (diffX > 50) {
       if (currentIndex > 0) {
-        currentIndex--;
-        showSlide(currentIndex);
+        currentIndex--
+        showSlide(currentIndex)
       }
     }
   
     // Prevent scrolling while dragging
-    e.preventDefault();
-  });
+    e.preventDefault()
+  })
   
   slider.addEventListener('touchend', () => {
-    isDragging = false;
-  });
+    isDragging = false
+  })
+
+
+const ballsEl = document.getElementById("balls-el")
+
+ballsEl.addEventListener("click", function(e){
+    e.target.classList.add('count-dot-active')
+})
