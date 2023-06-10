@@ -197,15 +197,8 @@ li {
 #score {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: center;   
 } 
-
-.teams {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .team-name {
     font-size: 3em;
@@ -225,7 +218,7 @@ li {
 .slide {
     display: none;
     width: 100%;
-    height: 350px;
+    height: 300px;
 }
   
 .pagination {
