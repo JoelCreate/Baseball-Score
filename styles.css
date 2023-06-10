@@ -261,6 +261,11 @@ li {
     align-items: center;
 } 
 
+.count-img {
+    width: 28px;
+    height: 28px;
+}
+
 #inning {
     justify-content: flex;
     gap: .5em;
