@@ -92,7 +92,7 @@ hr {
     border: 1px dashed #b6ab93;
 }
 
-#modal-2 {
+#modal-2, #modal-3 {
     display: none;
 }
 
