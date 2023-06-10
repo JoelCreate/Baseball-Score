@@ -158,8 +158,29 @@ function showSlide(index) {
   })
 
 
-const ballsEl = document.getElementById("balls-el")
 
-ballsEl.addEventListener("click", function(e){
-    e.target.classList.add('count-dot-active')
-})
+const countDots = document.querySelectorAll('.count-dots')
+
+let countIndex = 0
+
+function addClassToCurrentDiv() {
+    
+    for (let i = 0; i < countDots.length; i++){
+        countDots[i].classList.add('count-dot-active')
+    }
+}
+
+// function removeClassFromAllDivs() {
+//     countDots.forEach((div) => {
+//         div.classList.remove('count-dot-active')
+//     })
+// }
+
+function handleClick() {
+    
+    addClassToCurrentDiv()
+    
+}
+
+const ballsEl = document.getElementById("balls-el")
+ballsEl.addEventListener("click", handleClick)
