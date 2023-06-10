@@ -219,12 +219,13 @@ li {
   
 .slides {
     display: flex;
+    text-align: center;
 } 
 
 .slide {
     display: none;
     width: 100%;
-    height: auto;
+    height: 350px;
 }
   
 .pagination {
@@ -239,7 +240,7 @@ li {
     border: 2px solid #191919;
     border-radius: 50%;
     background-color: #FFE6C2;
-    margin: 20px 5px 40px 5px;
+    margin: 10px 5px 20px 5px;
     cursor: pointer;
 }
   
@@ -247,13 +248,6 @@ li {
     background-color: #191919;
 }
  
-  
-  
-  
-  
-  
-  
-  
 
 .points {
     font-size: 15em;
@@ -278,7 +272,8 @@ li {
 }
 
 #inning, .count-wrapper {
-    width: 300px;
+    width: 320px;
+    max-width: 375px;
     display: flex;
     padding: 15px;
     /* border-top: 1px solid #191919;
