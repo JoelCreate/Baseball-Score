@@ -186,3 +186,51 @@ function handleClick() {
 
 const ballsEl = document.getElementById("balls-el")
 ballsEl.addEventListener("click", handleClick)
+
+
+// Inning Increment and Decrement Below
+
+const addInningBtn = document.getElementById("plus-inning-btn")
+const minusInningBtn = document.getElementById("minus-inning-btn")
+const topOfInningArrow = document.getElementById("top-inning-arrow")
+const bottomOfInningArrow = document.getElementById("bottom-inning-arrow") 
+
+let inningCount = document.getElementById("inning-count")
+let plusMinusInning = 1
+let inningClickCount = 0
+
+bottomOfInningArrow.style.display="none"
+
+function handleInningClickCountPlus () {
+   inningClickCount++
+
+   if (inningClickCount === 1) {      
+        topOfInningArrow.style.display = "none" 
+        bottomOfInningArrow.style.display = "block"     
+    } else if (inningClickCount === 2) {      
+        plusMinusInning += 1
+        inningCount.textContent = plusMinusInning      
+    } else {
+       plusMinusInning += 1
+    }
+}
+
+addInningBtn.addEventListener("click", handleInningClickCountPlus)
+
+function handleInningClickCountMinus () {
+   inningClickCount--
+
+   if (inningClickCount === 1) {      
+        plusMinusInning -= 1
+        inningCount.textContent = plusMinusInning 
+        topOfInningArrow.style.display = "block"
+        bottomOfInningArrow.style.display = "none"      
+    } else if (inningClickCount === 2) {      
+        plusMinusInning -= 1
+        inningCount.textContent = plusMinusInning      
+    }
+
+}
+
+minusInningBtn.addEventListener("click", handleInningClickCountMinus)
+

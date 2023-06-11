@@ -74,14 +74,14 @@
                 <div class="slides">
                 
                     <div class="teams slide" id="team2">
-                        <h2 class="team-name animate__animated animate__bounceIn" id="away-team-el">away </h2>                   
+                        <h2 class="team-name animate__animated animate__bounceIn" id="away-team-el">away</h2>                   
                         <div id="score-el" onclick="plusOneAway()">
                             <h1 class="numbers points animate__animated animate__lightSpeedInLeft animate__faster" id="away-team-points">0</h1>
                         </div>
                     </div>
 
                     <div class="teams slide" id="team1">
-                        <h2 class="team-name animate__animated animate__bounceIn" id="home-team-el">home </h2>                  
+                        <h2 class="team-name animate__animated animate__bounceIn" id="home-team-el">home</h2>                  
                         <div id="score-el" onclick="plusOneHome()">
                             <h1 class="numbers points animate__animated animate__lightSpeedInRight animate__faster" id="home-team-points">0</h1>
                         </div>
@@ -101,16 +101,16 @@
             <div id="count-container">
 
                 <div id="inning">                    
-                    <h2>INNING <span class="numbers">1</span></h2>
+                    <h2>INNING <span id="inning-count" class="numbers">1</span></h2>
                     
                     <div id="inning-arrows">
-                        <i id="top" class="fa-solid fa-caret-up fa-2xl"></i>
-                        <!-- <i id="bottom" class="fa-solid fa-caret-down fa-2xl"></i> -->
+                        <i id="top-inning-arrow" class="fa-solid fa-caret-up fa-2xl"></i>
+                        <i id="bottom-inning-arrow" class="fa-solid fa-caret-down fa-2xl"></i>
                     </div>
 
                     <div id="inning-plus-minus">
-                        <i class="fa-solid fa-circle-plus fa-2xl"></i>
-                        <i class="fa-solid fa-circle-minus fa-2xl"></i>
+                        <i id="plus-inning-btn" class="fa-solid fa-circle-plus fa-2xl" onclick="addInning()"></i>
+                        <i id="minus-inning-btn" class="fa-solid fa-circle-minus fa-2xl" onclick="minusInning()"></i>
                     </div>
 
                 </div>
