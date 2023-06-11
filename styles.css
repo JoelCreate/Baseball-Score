@@ -36,7 +36,7 @@ p {
     z-index: 1;
     display: flex;
     align-items: center;
-    display: none;
+
 }
 
 .modal-wrapper {
@@ -246,6 +246,7 @@ li {
 
 .points {
     font-size: 15em;
+    line-height: .9em;
 }
 
 
