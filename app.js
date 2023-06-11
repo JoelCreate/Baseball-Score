@@ -1,3 +1,5 @@
+screen.orientation.lock()
+
 function toggleMobileMenu(menu) {
     menu.classList.toggle('open');
 }  
