@@ -179,9 +179,11 @@ const minusInningBtn = document.getElementById("minus-inning-btn")
 const topOfInningArrow = document.getElementById("top-inning-arrow")
 const bottomOfInningArrow = document.getElementById("bottom-inning-arrow") 
 
+bottomOfInningArrow.style.display = "none"
+
 let inningCount = document.getElementById("inning-count")
-let plusMinusInning = 1
-let inningClickCount = 0
+let inningStart = 1
+let inningButtonClickCount = 0
 
 function addInning(){
     if(bottomOfInningArrow.style.display === "none") {
@@ -203,42 +205,35 @@ function minusInning(){
   }
 }
 
-function handleInningClickCountPlus () {
-  //  inningClickCount++
-
-  //  if (inningClickCount === 1) {      
-  //       topOfInningArrow.style.display = "none" 
-  //       bottomOfInningArrow.style.display = "block"     
-  //   }
-  //   else if (inningClickCount === 2) {      
-  //       plusMinusInning += 1
-  //       inningCount.textContent = plusMinusInning      
-  //   } else {
-  //      plusMinusInning += 1
-  //   }
-
-    if(inningClickCount === 1) {
-
-    }
-
+function incrementInningEveryTwoClicks() {
+    inningStart +=1
+    inningCount.textContent = inningStart
 }
 
-addInningBtn.addEventListener("click", handleInningClickCountPlus)
-
-function handleInningClickCountMinus () {
-   inningClickCount--
-
-   if (inningClickCount === 1) {      
-        plusMinusInning -= 1
-        inningCount.textContent = plusMinusInning 
-        topOfInningArrow.style.display = "block"
-        bottomOfInningArrow.style.display = "none"      
-    } else if (inningClickCount === 2) {      
-        plusMinusInning -= 1
-        inningCount.textContent = plusMinusInning      
-    }
-
+function decrementInningEveryTwoClicks() {
+  inningStart -=1
+  inningCount.textContent = inningStart
 }
 
-minusInningBtn.addEventListener("click", handleInningClickCountMinus)
+addInningBtn.addEventListener("click", function(){
+  inningButtonClickCount++
+
+  if(inningButtonClickCount === 2) {
+    incrementInningEveryTwoClicks()
+    inningButtonClickCount = 0
+  }
+    
+})
+
+minusInningBtn.addEventListener("click", function(){
+  inningButtonClickCount++
+
+  if(inningButtonClickCount === 2) {
+    decrementInningEveryTwoClicks()
+    inningButtonClickCount = 0
+  }
+
+})
+
+
 

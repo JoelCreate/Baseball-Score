@@ -299,10 +299,6 @@ li {
     margin: 0 0 0 48px;
 }
 
-#bottom-inning-arrow {
-    display: none;
-}
-
 .count-wrapper {
     border-top: 1px solid #191919;  
     text-align: center;  
