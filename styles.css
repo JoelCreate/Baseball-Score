@@ -36,7 +36,7 @@ p {
     z-index: 1;
     display: flex;
     align-items: center;
-
+    display: none;
 }
 
 .modal-wrapper {
@@ -297,6 +297,10 @@ li {
 #inning-plus-minus {
     gap: 1.25em;
     margin: 0 0 0 48px;
+}
+
+#bottom-inning-arrow {
+    display: none;
 }
 
 .count-wrapper {

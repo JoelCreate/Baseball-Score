@@ -183,20 +183,44 @@ let inningCount = document.getElementById("inning-count")
 let plusMinusInning = 1
 let inningClickCount = 0
 
-bottomOfInningArrow.style.display="none"
+function addInning(){
+    if(bottomOfInningArrow.style.display === "none") {
+       bottomOfInningArrow.style.display = "block"
+       topOfInningArrow.style.display = "none"
+    } else {
+      topOfInningArrow.style.display = "block"
+      bottomOfInningArrow.style.display = "none"      
+    }
+}
+
+function minusInning(){
+  if(bottomOfInningArrow.style.display === "none") {
+     bottomOfInningArrow.style.display = "block"
+     topOfInningArrow.style.display = "none"
+  } else {
+    topOfInningArrow.style.display = "block"
+    bottomOfInningArrow.style.display = "none"      
+  }
+}
 
 function handleInningClickCountPlus () {
-   inningClickCount++
+  //  inningClickCount++
 
-   if (inningClickCount === 1) {      
-        topOfInningArrow.style.display = "none" 
-        bottomOfInningArrow.style.display = "block"     
-    } else if (inningClickCount === 2) {      
-        plusMinusInning += 1
-        inningCount.textContent = plusMinusInning      
-    } else {
-       plusMinusInning += 1
+  //  if (inningClickCount === 1) {      
+  //       topOfInningArrow.style.display = "none" 
+  //       bottomOfInningArrow.style.display = "block"     
+  //   }
+  //   else if (inningClickCount === 2) {      
+  //       plusMinusInning += 1
+  //       inningCount.textContent = plusMinusInning      
+  //   } else {
+  //      plusMinusInning += 1
+  //   }
+
+    if(inningClickCount === 1) {
+
     }
+
 }
 
 addInningBtn.addEventListener("click", handleInningClickCountPlus)
