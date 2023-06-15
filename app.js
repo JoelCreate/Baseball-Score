@@ -145,32 +145,6 @@ function showSlide(index) {
 
 
 
-const countDots = document.querySelectorAll('.count-dots')
-
-let countIndex = 0
-
-function addClassToCurrentDiv() {
-    
-    for (let i = 0; i < countDots.length; i++){
-        countDots[i].classList.add('count-dot-active')
-    }
-}
-
-// function removeClassFromAllDivs() {
-//     countDots.forEach((div) => {
-//         div.classList.remove('count-dot-active')
-//     })
-// }
-
-function handleClick() {
-    
-    addClassToCurrentDiv()
-    
-}
-
-const ballsEl = document.getElementById("balls-el")
-ballsEl.addEventListener("click", handleClick)
-
 
 // Inning Increment and Decrement Below
 
@@ -196,12 +170,12 @@ function addInning(){
 }
 
 function minusInning(){
-  if(bottomOfInningArrow.style.display === "none") {
-     bottomOfInningArrow.style.display = "block"
-     topOfInningArrow.style.display = "none"
+  if(bottomOfInningArrow.style.display === "block") {
+     bottomOfInningArrow.style.display = "none"
+     topOfInningArrow.style.display = "block"
   } else {
-    topOfInningArrow.style.display = "block"
-    bottomOfInningArrow.style.display = "none"      
+    topOfInningArrow.style.display = "none"
+    bottomOfInningArrow.style.display = "block"      
   }
 }
 
@@ -235,5 +209,24 @@ minusInningBtn.addEventListener("click", function(){
 
 })
 
+
+// Displaying Count of Balls, Strikes and Outs 
+
+const countDots = document.getElementsByClassName("count-dots")
+const ballsEl = document.getElementById("balls-el")
+
+function handleClickCount(){
+  this.classList.add("count-dots-active")
+}
+
+function addActiveDots(){
+  for ( let i = 0; i < countDots.length; i++) {
+    countDots[i].addEventListener("click", handleClickCount)
+  }
+}
+
+ballsEl.addEventListener("click", function(){
+  addActiveDots()
+})
 
 
