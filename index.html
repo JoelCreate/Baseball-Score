@@ -56,14 +56,16 @@
                 <img id="logo" src="./icons/baseball_bats.png" alt="basbeball bat score logo">
 
                 <div id="menu" onclick="toggleMobileMenu(this)">
-                    <div class="bar bar1"></div>
-                    <div class="bar bar2"></div>
-                    <div class="bar bar3"></div>
-                    <ul class="mobile-menu">
+                    <div id="menu-bar">
+                        <div class="bar bar1"></div>
+                        <div class="bar bar2"></div>
+                        <div class="bar bar3"></div>
+                    </div>
+                    <ul class="mobile-menu animate__animated animate__fadeIn">
                         <!-- <li><a href="#header">Change Home Team Name</a></li>
                         <li><a href="#about">Change Away Team Name</a></li> -->
-                        <li><a href="#home">Start Over</a></li>  
-                        <p id="menu-footer">Created with <i class="fa-solid fa-code"></i> by <a href="https://joelcodes.co" target="_blank">Joel Wiesner</a> | &copy; 2023</p>
+                        <li><a href="#home" id="start-over-btn" class="btn" onclick="startOver()">Start Over</a></li>  
+                        <p id="menu-footer">Created with <i class="fa-solid fa-code"></i> by<br><a href="https://joelcodes.co" target="_blank">Joel Wiesner</a> | &copy; 2023</p>
                     </ul>
                 </div>
                 

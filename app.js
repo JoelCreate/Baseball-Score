@@ -231,3 +231,6 @@ ballsEl.addEventListener("click", function(){
 })
 
 
+function startOver() {
+  location.reload(true)
+}

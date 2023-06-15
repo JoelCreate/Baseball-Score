@@ -15,6 +15,10 @@ body {
     overflow: hidden;
 }
 
+a {
+    color: #94754a;
+}
+
 .numbers {
     font-family: 'Geologica', sans-serif;
 }
@@ -123,8 +127,7 @@ ul {
     align-items: center;
 }
   
-ul a {
-    color: #772f1a;
+ul a {    
     font-size: 1.25em;
     text-decoration: none;
 }
@@ -144,7 +147,7 @@ li {
     background-color: #191919;
     border-radius: 100px;
     margin: 6px 0;
-    transition: 0.4s;
+    transition: 0.4s;    
 }
 
 
@@ -174,10 +177,14 @@ li {
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(255,255,255,0.9);
+    background: #fff;
     height: 100%;
     width: 100%;
     z-index: 1;
+}
+
+#menu-bar {
+    z-index: 99999 !important;
 }
 
 .mobile-menu li {
@@ -186,12 +193,13 @@ li {
 }
 
 #menu {
-    display: block;
+    display: flex;
 }
 
 #menu-footer {
-    margin-top: 100%;
+    margin: 45px auto;
     font-size: 12px;
+    text-align: center;
 }
 
 
