@@ -202,9 +202,10 @@ addInningBtn.addEventListener("click", function(){
 minusInningBtn.addEventListener("click", function(){
   inningButtonClickCount++
 
-  if(inningButtonClickCount === 2) {
-    decrementInningEveryTwoClicks()
-    inningButtonClickCount = 0
+  if(inningButtonClickCount === 1) {
+    decrementInningEveryTwoClicks()    
+  } else if (inningButtonClickCount === 2) {
+    inningButtonClickCount = 0  
   }
 
 })
