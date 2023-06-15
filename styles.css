@@ -40,7 +40,6 @@ p {
     z-index: 1;
     display: flex;
     align-items: center;
-    display: none;
 }
 
 .modal-wrapper {
