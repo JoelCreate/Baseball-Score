@@ -220,6 +220,8 @@ minusInningBtn.addEventListener("click", function(){
 
 
 // Displaying Count of Balls, Strikes and Outs 
+
+//Balls Count
 const ballsEl = document.getElementById("balls-el")
 const ballOne = document.getElementById("ball1")
 const ballTwo = document.getElementById("ball2")
@@ -228,7 +230,7 @@ const ballFour = document.getElementById("ball4")
 
 let ballClickCount = 0
 
-function handleCountClick(){
+function handleCountClickBalls(){
   ballClickCount++    
 
     if(ballClickCount === 1) {
@@ -248,9 +250,61 @@ function handleCountClick(){
     } 
 }
 
-ballsEl.addEventListener("click", handleCountClick)
+ballsEl.addEventListener("click", handleCountClickBalls)
 
+//Strikes Count
+const strikesEl = document.getElementById("strikes-el")
+const strikeOne = document.getElementById("strike1")
+const strikeTwo = document.getElementById("strike2")
+const strikeThree = document.getElementById("strike3")
 
+let strikeClickCount = 0
+
+function handleCountClickStrikes(){
+  strikeClickCount++    
+
+    if(strikeClickCount === 1) {
+      strikeOne.classList.add("count-dots-active")
+    } else if (strikeClickCount === 2) {
+      strikeTwo.classList.add("count-dots-active")
+    } else if (strikeClickCount === 3) {
+      strikeThree.classList.add("count-dots-active")
+    } else if (strikeClickCount === 4) {
+      strikeOne.classList.remove("count-dots-active")
+      strikeTwo.classList.remove("count-dots-active")
+      strikeThree.classList.remove("count-dots-active")
+      strikeClickCount = 0
+    } 
+}
+
+strikesEl.addEventListener("click", handleCountClickStrikes)
+
+//Outs Count
+const outsEl = document.getElementById("outs-el")
+const outOne = document.getElementById("out1")
+const outTwo = document.getElementById("out2")
+const outThree = document.getElementById("out3")
+
+let outClickCount = 0
+
+function handleCountClickOuts(){
+  outClickCount++    
+
+    if(outClickCount === 1) {
+      outOne.classList.add("count-dots-active")
+    } else if (outClickCount === 2) {
+      outTwo.classList.add("count-dots-active")
+    } else if (outClickCount === 3) {
+      outThree.classList.add("count-dots-active")
+    } else if (outClickCount === 4) {
+      outOne.classList.remove("count-dots-active")
+      outTwo.classList.remove("count-dots-active")
+      outThree.classList.remove("count-dots-active")
+      outClickCount = 0
+    } 
+}
+
+outsEl.addEventListener("click", handleCountClickOuts)
 
 
 //Reload page of entire app
