@@ -220,24 +220,40 @@ minusInningBtn.addEventListener("click", function(){
 
 
 // Displaying Count of Balls, Strikes and Outs 
-
-const countDots = document.getElementsByClassName("count-dots")
 const ballsEl = document.getElementById("balls-el")
+const ballOne = document.getElementById("ball1")
+const ballTwo = document.getElementById("ball2")
+const ballThree = document.getElementById("ball3")
+const ballFour = document.getElementById("ball4")
 
-function handleClickCount(){
-  this.classList.add("count-dots-active")
+let ballClickCount = 0
+
+function handleCountClick(){
+  ballClickCount++    
+
+    if(ballClickCount === 1) {
+      ballOne.classList.add("count-dots-active")
+    } else if (ballClickCount === 2) {
+      ballTwo.classList.add("count-dots-active")
+    } else if (ballClickCount === 3) {
+      ballThree.classList.add("count-dots-active")
+    } else if (ballClickCount === 4) {
+      ballFour.classList.add("count-dots-active")
+    } else if (ballClickCount === 5) {
+      ballOne.classList.remove("count-dots-active")
+      ballTwo.classList.remove("count-dots-active")
+      ballThree.classList.remove("count-dots-active")
+      ballFour.classList.remove("count-dots-active")
+      ballClickCount = 0
+    } 
 }
 
-function addActiveDots(){
-  for ( let i = 0; i < countDots.length; i++) {
-    countDots[i].addEventListener("click", handleClickCount)
-  }
-}
+ballsEl.addEventListener("click", handleCountClick)
 
-ballsEl.addEventListener("click", function(){
-  addActiveDots()
-})
 
+
+
+//Reload page of entire app
 
 function startOver() {
   location.reload(true)
