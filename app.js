@@ -62,6 +62,16 @@ function plusOneAway() {
     awayTeamPoints.textContent = awayScore
 }
 
+function minusOneHome() {
+  homeScore -= 1
+  homeTeamPoints.textContent = homeScore
+}
+
+function minusOneAway() {
+  awayScore -= 1
+  awayTeamPoints.textContent = awayScore
+}
+
 
 
 const slider = document.querySelector('.slider')
