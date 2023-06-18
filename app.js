@@ -216,6 +216,11 @@ minusInningBtn.addEventListener("click", function(){
     inningButtonClickCount = 0  
   }
 
+  // if (inningCount.textContent <= 1) {
+  //     inningStart = 1
+  //     inningButtonClickCount = 0
+  // }
+
 })
 
 
